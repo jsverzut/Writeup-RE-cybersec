@@ -158,7 +158,7 @@ if pair_num == total:
   print('CTF{' + hashlib.sha1(b'|'.join(f'{u}:{p}'.encode('utf-8') for u, p in pairs)).hexdigest() + '}')
 ```
 
-Nesse código, em vez de inverter manualmente a matemática do algoritmo (S-box, Feistel, produto de matrizes), foi utilizada a execução simbólica com `angr` para automatizar a geração das senhas.
+Nesse código, feito por [deadmoo83](https://gist.github.com/deadmoo83/fc7a82a7e0b06d8ca45acab9e3cd90c2), em vez de inverter manualmente a matemática do algoritmo (S-box, Feistel, produto de matrizes), foi utilizada a execução simbólica com `angr` para automatizar a geração das senhas.
 
 O script carrega o binário, localiza a função de verificação e, como pula a inicialização normal do programa, desfaz manualmente a ofuscação das tabelas usadas no algoritmo (um XOR fixo e uma troca de valores) que normalmente aconteceria nessa etapa.
 
