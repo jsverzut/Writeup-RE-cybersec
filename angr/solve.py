@@ -150,7 +150,7 @@ for index, pair in enumerate(pairs):
 
       print(f"Solved {pair_num}/{total} {user} {solved_pw}")
 
-      pairs[i] = (user, solved_pw)
+      pairs[index] = (user, solved_pw)
 
 # if we found all the password then generate the flag
 if pair_num == total:
